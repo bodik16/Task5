@@ -1,0 +1,114 @@
+﻿<Window x:Class="Task5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task5"
+        mc:Ignorable="d"
+       Title="Водій Таксі"  FontFamily="Verdana" Height="790.821" Width="976.875"  Name="MainTaxiDriverWindow">
+    
+    <Grid Margin="10" Name="MainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="213*" />
+            <ColumnDefinition Width="491*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.ColumnSpan="2" Margin="0,0,172,0" RenderTransformOrigin="0.455,0.548">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.5*" />
+            </Grid.ColumnDefinitions>
+            <GroupBox x:Name="groupBox"  FontFamily="Verdana" Header="Вхід водія" Grid.Row="0" Grid.Column="0" Margin="0,0,5,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label x:Name="driverUsernameLabel" FontFamily="Verdana" Content="Прізвище водія: " Grid.Row="0" Grid.Column="0"/>
+                    <TextBox x:Name="driverSurName" FontFamily="Verdana" TextWrapping="Wrap" Height="23" Text="Mykytyn" Grid.Row="0" Grid.Column="1" />
+                    <Label x:Name="driverUserNameLabel" FontFamily="Verdana" Content="Імя водія: " Grid.Row="1" Grid.Column="0"/>
+                    <TextBox x:Name="driverUserName" FontFamily="Verdana" TextWrapping="Wrap" Height="23" Text="Anatolii" Grid.Row="1" Grid.Column="1"/>
+                    <Button x:Name="endOfWork" FontFamily="Verdana" Content="Завершити зміну" Grid.Row="2" Grid.Column="0" Margin="5" Click="endOfWork_Click"/>
+                    <Button x:Name="startWork" FontFamily="Verdana" Content="Почати зміну" Grid.Row="2" Grid.Column="1" Margin="5" Click="startWork_Click"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox x:Name="groupBox1" FontFamily="Verdana" Header="Інформаційна панель" Grid.Row="0" Margin="0,120,5.333,-110">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label x:Name="driverInfoSurnameName" FontFamily="Verdana" Content="Водій: " Grid.Row="0" Grid.Column="0"/>
+                    <Label x:Name="driverInfoSurnameNameDetails" FontFamily="Verdana" Content="(інформація відсутня)" Grid.Row="0" Grid.Column="1"/>
+                    <Label x:Name="driverInfoAge" FontFamily="Verdana" Content="Вік: " Grid.Row="0" Grid.Column="2"/>
+                    <Label x:Name="driverInfoAgeDetails" FontFamily="Verdana" Content="(--)" Grid.Row="0" Grid.Column="3"/>
+                    <Label x:Name="driverInfoCar"  FontFamily="Verdana" Content="Авто: " Grid.Row="1" Grid.Column="0"/>
+                    <Label x:Name="driverInfoCarDetails" FontFamily="Verdana" Content="(номер)" Grid.Row="1" Grid.Column="1"/>
+                    <Label x:Name="driverInfoExp" FontFamily="Verdana" Content="Стаж: " Grid.Row="1" Grid.Column="2"/>
+                    <Label x:Name="driverInfoExpDetails" FontFamily="Verdana" Content="(--) років" Grid.Row="1" Grid.Column="3"/>
+                    <Label x:Name="driverInfoCost" FontFamily="Verdana" Content="Виручка: " Grid.Row="2" Grid.Column="0"  FontWeight="Bold"/>
+                    <Label x:Name="driverInfoCostDetails" FontFamily="Verdana" Content="0 грн" Grid.Row="2" Grid.Column="1"  FontWeight="Bold"/>
+                    <Label x:Name="driverInfoCostPerMin" FontFamily="Verdana" Content="грн/хв: " Grid.Row="2" Grid.Column="2" />
+                    <Label x:Name="driverInfoCostPerMinDetails" FontFamily="Verdana" Content="0" Grid.Row="2" Grid.Column="3"/>
+                </Grid>
+            </GroupBox>
+        </Grid>
+        <GroupBox x:Name="groupBox2"  Header="Замовлення" Grid.Row="1" Grid.Column="0" Margin="0,135,0,10.333" Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="293*"/>
+                    <ColumnDefinition Width="645*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="18*"></ColumnDefinition>
+                        <ColumnDefinition Width="122*"/>
+                        <ColumnDefinition Width="141*"></ColumnDefinition>
+                        <ColumnDefinition Width="187*"></ColumnDefinition>
+                        <ColumnDefinition Width="188*"></ColumnDefinition>
+                        <ColumnDefinition Width="141*"></ColumnDefinition>
+                        <ColumnDefinition Width="140.667"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0" Name="dummywidth1" Grid.ColumnSpan="3" Margin="0,0,140.333,-0.333"></Border>
+                    <Border Grid.Column="2" Name="dummywidth2" Margin="0.334,0,0.333,-0.333"></Border>
+                    <Border Grid.Column="2" Name="dummywidth3" Grid.ColumnSpan="3" Margin="140.334,0,187.666,-0.333"></Border>
+                    <Border Grid.Column="4" Name="dummywidth4" Grid.ColumnSpan="2" Margin="0.334,0,140.333,-0.333"></Border>
+                    <Border Grid.Column="5" Name="dummywidth5" Grid.ColumnSpan="2" Margin="140.334,0,-0.001,-0.333"></Border>
+                    <Border Grid.Column="5" Name="dummywidth6" Grid.ColumnSpan="2" Margin="140.334,0,-0.001,-0.333"></Border>
+                </Grid>
+                <ListView x:Name="orders"  FontFamily="Verdana" HorizontalAlignment="Left" PreviewMouseLeftButtonUp="orders_Click" Width="928" Grid.ColumnSpan="2" Margin="0,10,0,0">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Ім'я клієнта" Width="{Binding ElementName=dummywidth1, Path=ActualWidth}" DisplayMemberBinding="{Binding Client.Name}" />
+                            <GridViewColumn Header="Моб. тел." Width="{Binding ElementName=dummywidth2, Path=ActualWidth}" DisplayMemberBinding="{Binding Client.PhoneNumber}" />
+                            <GridViewColumn Header="Пункт відправлення" Width="{Binding ElementName=dummywidth3, Path=ActualWidth}" DisplayMemberBinding="{Binding Dispatch}" />
+                            <GridViewColumn Header="Пункт призначення" Width="{Binding ElementName=dummywidth4, Path=ActualWidth}" DisplayMemberBinding="{Binding Destination}" />
+                            <GridViewColumn Header="Час відправлення" Width="{Binding ElementName=dummywidth5, Path=ActualWidth}" DisplayMemberBinding="{Binding ArriveTime}" />
+                            <GridViewColumn Header="Виконано" Width="{Binding ElementName=dummywidth6, Path=ActualWidth}" DisplayMemberBinding="{Binding IsDone}" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </GroupBox>
+        <Label Content="WELCOME TO OUR TAXI" Foreground="DeepPink" FontSize="37" Grid.Column="1" HorizontalAlignment="Left" Margin="157.667,83,0,0" VerticalAlignment="Top" Height="82" Width="464" Grid.RowSpan="2"/>
+    </Grid>
+   
+</Window>
