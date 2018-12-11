@@ -13,17 +13,26 @@ namespace Task3.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201812010649496_InitialCreate"; }
+            get
+            {
+                return "201812010649496_InitialCreate";
+            }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return null; }
+            get 
+            { 
+                return null;
+            }
         }
         
         string IMigrationMetadata.Target
         {
-            get { return Resources.GetString("Target"); }
+            get 
+            { 
+                return Resources.GetString("Target"); 
+            }
         }
     }
 }
