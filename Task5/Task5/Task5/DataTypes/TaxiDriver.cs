@@ -54,7 +54,7 @@ namespace Task5.DataTypes
 
         public override string ToString()
         {
-            return String.Format("{0} {1} {2} {3} {4} {5} {6} {7}", DriverId, Surname, Name, Age, CarNumber, Experience, CostPerMinute, PayCheck);
+            return String.Format("{0} - {1} - {2} - {3} - {4} - {5} - {6} - {7}", DriverId, Surname, Name, Age, CarNumber, Experience, CostPerMinute, PayCheck);
         }
     }
 }
