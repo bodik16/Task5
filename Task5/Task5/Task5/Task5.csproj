@@ -62,7 +62,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DataTypes\DriverContext.cs" />
+    <Compile Include="DataTypes\DataContext.cs" />
     <Compile Include="DataTypes\TaxiClient.cs" />
     <Compile Include="DataTypes\TaxiDriver.cs" />
     <Compile Include="DataTypes\TaxiOrder.cs" />
